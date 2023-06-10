@@ -1,0 +1,7 @@
+server:
+  port: 4213
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pasteserver
+    username: pasteserver
+    password: pasteserver
