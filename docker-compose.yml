@@ -1,0 +1,9 @@
+services:
+  postgres:
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=pasteserver'
+      - 'POSTGRES_PASSWORD=pasteserver'
+      - 'POSTGRES_USER=pasteserver'
+    ports:
+      - '5432'
