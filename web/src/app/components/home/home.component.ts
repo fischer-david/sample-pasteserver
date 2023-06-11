@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
 import {PasteService} from "../../services/paste.service";
 
 @Component({
@@ -19,5 +19,9 @@ export class HomeComponent {
         document.location.href = `/${x}`
       })
     }
+  }
+
+  handlePaste(event: ClipboardEvent): void {
+
   }
 }
