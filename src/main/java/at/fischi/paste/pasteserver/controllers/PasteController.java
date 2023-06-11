@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/paste")
+@RequestMapping("/api/paste")
 public class PasteController {
     private final PasteService pasteService;
 
@@ -21,8 +21,12 @@ public class PasteController {
     }
 
     @PostMapping()
-    public UUID createPaste(PasteDto pasteDto) {
-        return this.pasteService.createPaste(pasteDto);
+    public UUID createPaste(String value) {
+        if(value == null) {
+            return null;
+        }
+
+        return this.pasteService.createPaste(value);
     }
 
     @GetMapping()
