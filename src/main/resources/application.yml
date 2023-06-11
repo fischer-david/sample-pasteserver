@@ -1,7 +1,18 @@
 server:
+  address: 0.0.0.0
   port: 4213
 spring:
+  main:
+    allow-bean-definition-overriding: true
   datasource:
-    url: jdbc:postgresql://localhost:5432/pasteserver
+    url: jdbc:mysql://localhost:3306/pasteserver
     username: pasteserver
     password: pasteserver
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    generate-ddl: true
+    hibernate.ddl-auto: update
+  jackson:
+    serialization:
+      indent_output: true
