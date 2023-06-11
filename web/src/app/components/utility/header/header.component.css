@@ -1,6 +1,7 @@
 svg {
-  width: 30px;
+  width: 25px;
   height: 30%;
   --tw-invert: invert(100%);
+  padding-right: 4px;
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
