@@ -36,10 +36,10 @@ public class PasteService {
         return this.getPaste(uniqueId).isPresent();
     }
 
-    public UUID createPaste(PasteDto pasteDto) {
+    public UUID createPaste(String value) {
         PasteEntity pasteEntity = new PasteEntity();
         pasteEntity.setUniqueId(this.getUnusedUniqueId());
-        pasteEntity.setValue(pasteDto.value());
+        pasteEntity.setValue(value);
         pasteEntity.setCreation(new Date());
 
         return UUID.fromString(this.pasteRepository.save(pasteEntity).getUniqueId());
