@@ -6,7 +6,6 @@ import {AfterViewChecked, AfterViewInit, Component, OnInit} from '@angular/core'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  protected date: Date = new Date();
 
   constructor() {
 
