@@ -1,9 +1,16 @@
 services:
-  postgres:
-    image: 'postgres:latest'
+  mariadb:
+    image: mariadb:latest
     environment:
-      - 'POSTGRES_DB=pasteserver'
-      - 'POSTGRES_PASSWORD=pasteserver'
-      - 'POSTGRES_USER=pasteserver'
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: pasteserver
+      MYSQL_USER: pasteserver
+      MYSQL_PASSWORD: pasteserver
     ports:
-      - '5432'
+      - "3306:3306"
+    volumes:
+      - mariadb-db-data:/var/lib/mysql
+    command: [--wait_timeout=1800]
+
+volumes:
+  mariadb-db-data:
