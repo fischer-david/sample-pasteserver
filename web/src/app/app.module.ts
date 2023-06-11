@@ -5,10 +5,16 @@ import { AppComponent } from './app.component';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import {HighlightJsDirective} from "ngx-highlight-js";
 import {FormsModule} from "@angular/forms";
-import { HomeComponent } from './components/default/home.component';
+import { HomeComponent } from './components/home/home.component';
 import { PastedComponent } from './components/pasted/pasted.component';
 import {RouterModule, Routes} from "@angular/router";
 import {HttpClientModule} from "@angular/common/http";
+import { AdminComponent } from './components/admin/admin.component';
+import { LoginComponent } from './components/auth/login/login.component';
+import { RegisterComponent } from './components/auth/register/register.component';
+import { HeaderComponent } from './components/utility/header/header.component';
+import { FooterComponent } from './components/utility/footer/footer.component';
+import { AccountComponent } from './components/account/account.component';
 
 const routes: Routes = [
   {
@@ -18,6 +24,10 @@ const routes: Routes = [
   {
     path: ":id",
     component: PastedComponent
+  },
+  {
+    path: "account",
+    component: AccountComponent
   },
   {
     path: '**',
@@ -31,6 +41,12 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     PastedComponent,
+    AdminComponent,
+    LoginComponent,
+    RegisterComponent,
+    HeaderComponent,
+    FooterComponent,
+    AccountComponent,
   ],
   imports: [
     BrowserModule,
