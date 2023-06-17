@@ -19,6 +19,6 @@ export class PasteService {
   }
 
   public createPaste(value: string): Observable<string> {
-    return this.httpClient.post<string>(`/api/paste?value=${encodeURIComponent(value).replaceAll("%0A%0A", "%0A")}`, undefined);
+    return this.httpClient.post<string>(`/api/paste`, value);
   }
 }

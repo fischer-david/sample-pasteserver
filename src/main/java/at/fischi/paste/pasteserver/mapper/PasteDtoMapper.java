@@ -12,7 +12,9 @@ public class PasteDtoMapper implements Function<PasteEntity, PasteDto> {
     @Override
     public PasteDto apply(PasteEntity pasteEntity) {
         return new PasteDto(
-                pasteEntity.getValue(),
+                pasteEntity.isArchived() ?
+                        "Paste is archived :(" :
+                        pasteEntity.getValue(),
                 pasteEntity.getCreation()
         );
     }
