@@ -3,10 +3,7 @@ package at.fischi.paste.pasteserver.controllers;
 import at.fischi.paste.pasteserver.dtos.PasteDto;
 import at.fischi.paste.pasteserver.services.PasteService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
 
@@ -21,7 +18,7 @@ public class PasteController {
     }
 
     @PostMapping()
-    public UUID createPaste(String value) {
+    public UUID createPaste(@RequestBody String value) {
         if(value == null) {
             return null;
         }

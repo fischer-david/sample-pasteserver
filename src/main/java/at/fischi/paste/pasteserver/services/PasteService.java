@@ -38,6 +38,7 @@ public class PasteService {
 
     public UUID createPaste(String value) {
         PasteEntity pasteEntity = new PasteEntity();
+        pasteEntity.setArchived(false);
         pasteEntity.setUniqueId(this.getUnusedUniqueId());
         pasteEntity.setValue(value);
         pasteEntity.setCreation(new Date());
