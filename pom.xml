@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>at.fischi.paste</groupId>
-	<artifactId>venerux-pasteserver</artifactId>
+	<artifactId>test-pasteserver</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>venerux-pasteserver</name>
-	<description>venerux-pasteserver</description>
+	<name>test-pasteserver</name>
+	<description>test-pasteserver</description>
 	<properties>
 		<java.version>20</java.version>
 	</properties>
